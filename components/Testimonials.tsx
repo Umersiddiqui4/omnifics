@@ -15,9 +15,6 @@ export default function Testimonials() {
         try {
           const { Swiper } = await import('swiper')
           const { Pagination, Autoplay, EffectFade } = await import('swiper/modules')
-          await import('swiper/css')
-          await import('swiper/css/pagination')
-          await import('swiper/css/effect-fade')
           
           if (swiperRef.current && !swiperInstance.current) {
             swiperInstance.current = new Swiper(swiperRef.current, {
@@ -41,8 +38,8 @@ export default function Testimonials() {
                 }
               },
               on: {
-                slideChange: function () {
-                  setActiveIndex(this.realIndex)
+                slideChange: function (swiper) {
+                  setActiveIndex(swiper.realIndex)
                 }
               }
             })
