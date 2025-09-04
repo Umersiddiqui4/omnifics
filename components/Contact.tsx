@@ -56,17 +56,17 @@ export default function Contact() {
     {
       icon: 'bi-envelope-fill',
       title: 'Email Us',
-      content: 'hello@dewi.com',
+      content: 'info@omnifics.io',
       subtitle: 'General Inquiries',
-      link: 'mailto:hello@dewi.com',
+      link: 'mailto:info@omnifics.io',
       color: 'var(--text-accent)'
     },
     {
       icon: 'bi-telephone-fill',
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
+      content: '+92 300 9221711',
       subtitle: 'Mon-Fri 9AM-6PM PST',
-      link: 'tel:+15551234567',
+      link: 'tel:+92 300 9221711',
       color: 'var(--text-accent)'
     },
     {

@@ -15,22 +15,22 @@ export default function About() {
   const tabContent = {
     mission: {
       title: 'Empowering Digital Growth',
-      description: 'We are dedicated to transforming businesses through innovative digital solutions that drive growth, enhance user experiences, and create lasting impact in the digital landscape.',
+      description: "To deliver innovative, reliable, and scalable IT solutions that empower businesses to achieve digital excellence.",
       features: [
-        'Strategic digital transformation',
-        'User-centered design approach',
-        'Performance-driven development',
-        'Continuous innovation focus'
+        'Putting client success at the heart of every solution.',
+        'Delivering consistent, high-quality solutions that businesses can depend on.',
+        'Building flexible systems designed to evolve with business needs.',
+        'Enabling organizations to thrive in today’s competitive digital landscape.'
       ]
     },
     vision: {
       title: 'Leading Digital Innovation',
-      description: 'To be the premier partner for businesses seeking to thrive in the digital age, known for our creativity, technical excellence, and unwavering commitment to client success.',
+      description: 'To be a leading technology partner, driving digital transformation and shaping a smarter, connected future.',
       features: [
-        'Industry-leading solutions',
-        'Cutting-edge technology',
-        'Global digital presence',
-        'Sustainable growth models'
+        'Building long-term relationships through expertise and commitment.',
+        'Empowering businesses with innovative solutions for the modern era.',
+        'Leveraging advanced technologies to create intelligent ecosystems.',
+        'Enabling seamless integration and connectivity across people, systems, and businesses.'
       ]
     },
     values: {
@@ -54,12 +54,12 @@ export default function About() {
         </div>
 
         <div className="row align-items-center">
-          <div className="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div className="col-lg-6 col-md-12" data-aos="fade-right" data-aos-delay="100">
             <div className="about-image-wrapper">
               <div className="about-image">
                 <Image
                   src="/assets/img/about.jpg"
-                  alt="About Dewi"
+                  alt="About Us"
                   width={600}
                   height={400}
                   className="img-fluid rounded-4"
@@ -85,17 +85,46 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div className="col-lg-6 col-md-12" data-aos="fade-left" data-aos-delay="200">
             <div className="about-content">
-              <h3 className="about-subtitle">Welcome to Dewi</h3>
+              <h3 className="about-subtitle">Welcome to Omnifics</h3>
               <h2 className="about-title">We Create Digital Experiences That Matter</h2>
               <p className="about-description">
-                At Dewi, we believe that great design and technology have the power to transform businesses and create meaningful connections with users. Our team of passionate designers and developers work together to craft digital solutions that not only look stunning but also drive real results.
-              </p>
+              Omnifics is a technology solutions company specializing in
+software development, resource augmentation, and IT
+infrastructure deployments, helping businesses adapt and
+thrive in the digital era.
+</p>
 
               {/* Interactive Tabs */}
               <div className="about-tabs">
-                <div className="tab-navigation" style={{ display: 'flex', gap: '0.3rem', flexWrap: 'nowrap' }}>
+                <div className="tab-navigation" style={{ display: 'flex', gap: '0.3rem', flexWrap: 'wrap', overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                  <style jsx>{`
+                    .tab-navigation::-webkit-scrollbar {
+                      display: none;
+                    }
+                    @media (max-width: 768px) {
+                      .tab-navigation {
+                        flex-wrap: nowrap;
+                        justify-content: flex-start;
+                      }
+                      .tab-button {
+                        min-width: 200px;
+                        flex-shrink: 0;
+                      }
+                    }
+                    @media (min-width: 769px) {
+                      .tab-navigation {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                      }
+                      .tab-button {
+                        min-width: auto;
+                        flex: 1;
+                        max-width: 300px;
+                      }
+                    }
+                  `}</style>
                   {tabs.map((tab) => (
                     <button
                       key={tab.id}

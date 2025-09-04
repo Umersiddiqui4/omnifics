@@ -1774,6 +1774,90 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+/* Footer Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-about .sitename {
+    font-size: 1.5rem;
+  }
+
+  .footer-links h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .footer-contact {
+    padding: 1rem !important;
+  }
+
+  .social-links {
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .social-links a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .newsletter-form-container {
+    flex-direction: column !important;
+  }
+
+  .newsletter-form-container input {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .newsletter-form-container button {
+    width: 100% !important;
+    max-width: none !important;
+    align-self: stretch !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding-top: 2rem;
+  }
+
+  .footer-about {
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links ul li {
+    justify-content: center;
+  }
+
+  .footer-newsletter {
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: left;
+  }
+}
+
 .footer::before {
   content: '';
   position: absolute;
@@ -3234,20 +3318,35 @@ select:focus {
     padding-left: 0;
     margin-top: 2rem;
   }
-  
+
   .tab-navigation {
     flex-direction: row;
     overflow-x: auto;
     padding-bottom: 1rem;
   }
-  
+
   .tab-button {
     min-width: 200px;
     flex-shrink: 0;
   }
-  
+
   .features-image {
     height: 300px; /* Smaller height on mobile */
+  }
+
+  /* About section responsive adjustments */
+  .about-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    text-align: center;
   }
 }
 
@@ -3255,27 +3354,82 @@ select:focus {
   .features-title {
     font-size: 1.8rem;
   }
-  
+
   .tab-button {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
+    min-width: 180px;
   }
-  
+
   .tab-icon {
     width: 40px;
     height: 40px;
   }
-  
+
   .tab-icon i {
     font-size: 1.1rem;
   }
-  
+
   .feature-card {
     padding: 1.5rem;
   }
-  
+
   .features-image {
     height: 250px; /* Even smaller on mobile */
+  }
+
+  /* About section mobile optimizations */
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .experience-badge {
+    padding: 0.75rem;
+  }
+
+  .experience-badge .years {
+    font-size: 1.5rem;
+  }
+
+  .experience-badge .text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tab-button {
+    min-width: 160px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .tab-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tab-icon i {
+    font-size: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
   }
 }
 

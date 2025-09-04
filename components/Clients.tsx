@@ -48,18 +48,18 @@ export default function Clients() {
   }, [])
 
   const clients = [
-    { id: 1, name: 'TechCorp', logo: '/assets/img/clients/client-1.png' },
-    { id: 2, name: 'InnovateLab', logo: '/assets/img/clients/client-2.png' },
-    { id: 3, name: 'DigitalFlow', logo: '/assets/img/clients/client-3.png' },
-    { id: 4, name: 'FutureTech', logo: '/assets/img/clients/client-4.png' },
-    { id: 5, name: 'SmartSolutions', logo: '/assets/img/clients/client-5.png' },
-    { id: 6, name: 'NextGen', logo: '/assets/img/clients/client-6.png' },
-    { id: 7, name: 'CloudWorks', logo: '/assets/img/clients/client-1.png' },
-    { id: 8, name: 'DataDrive', logo: '/assets/img/clients/client-2.png' },
-    { id: 9, name: 'AIConnect', logo: '/assets/img/clients/client-3.png' },
-    { id: 10, name: 'WebCraft', logo: '/assets/img/clients/client-4.png' },
-    { id: 11, name: 'MobileFirst', logo: '/assets/img/clients/client-5.png' },
-    { id: 12, name: 'DevStudio', logo: '/assets/img/clients/client-6.png' }
+    { id: 1, logo: '/assets/img/clients/abudhabi.svg' },
+    { id: 2, logo: '/assets/img/clients/ads.png' },
+    { id: 3, logo: '/assets/img/clients/careers.png' },
+    { id: 4, logo: '/assets/img/clients/note.png' },
+    { id: 5, logo: '/assets/img/clients/optimize.png' },
+    { id: 6, logo: '/assets/img/clients/POSPORT.png' },
+    { id: 7, logo: '/assets/img/clients/sicht.png' },
+    { id: 8, logo: '/assets/img/clients/smart.svg' },
+    { id: 9, logo: '/assets/img/clients/sudo.png' },
+    { id: 10, logo: '/assets/img/clients/tech.png' },
+    { id: 11, logo: '/assets/img/clients/tpe.png' },
+    { id: 12, logo: '/assets/img/clients/zyrous.svg' }
   ]
 
   return (
@@ -118,7 +118,7 @@ export default function Clients() {
                 >
                   <Image 
                     src={client.logo} 
-                    alt={client.name} 
+                    alt="client.name" 
                     width={120} 
                     height={60}
                     style={{
@@ -134,16 +134,7 @@ export default function Clients() {
                     }}
                   />
                 </div>
-                <span 
-                  style={{
-                    fontSize: '0.9rem',
-                    color: '#666',
-                    fontWeight: 500,
-                    textAlign: 'center'
-                  }}
-                >
-                  {client.name}
-                </span>
+               
               </div>
             ))}
 
@@ -182,7 +173,7 @@ export default function Clients() {
                 >
                   <Image 
                     src={client.logo} 
-                    alt={client.name} 
+                    alt="client.name"
                     width={120} 
                     height={60}
                     style={{
@@ -198,16 +189,7 @@ export default function Clients() {
                     }}
                   />
                 </div>
-                <span 
-                  style={{
-                    fontSize: '0.9rem',
-                    color: '#666',
-                    fontWeight: 500,
-                    textAlign: 'center'
-                  }}
-                >
-                  {client.name}
-                </span>
+               
               </div>
             ))}
           </div>

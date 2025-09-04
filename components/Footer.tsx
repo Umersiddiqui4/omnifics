@@ -44,15 +44,15 @@ export default function Footer() {
       }}
     >
       <div className="container footer-top">
-        <div className="row gy-5">
+        <div className="row gy-4 gy-md-5">
           {/* Company Info */}
-          <div className="col-lg-4 col-md-6 footer-about">
+          <div className="col-lg-4 col-md-6 col-12 footer-about">
              <Link
             href="/"
             className="d-flex align-items-center creative-logo"
           >
             <div>
-              <Image src={logo} alt="Dewi Logo" width={250} height={50} />
+              <Image src={logo} alt="Omnifics" width={250} height={50} />
             </div>
           </Link>
             
@@ -77,13 +77,13 @@ export default function Footer() {
                 border: '1px solid #10151b'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-                <i 
+              <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                <i
                   className="bi bi-geo-alt-fill"
-                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem' }}
+                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem', marginTop: '0.25rem', flexShrink: 0 }}
                 ></i>
-                <div>
-                  <p style={{ margin: 0, color: '#666666' }}>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <p style={{ margin: 0, color: '#666666', wordBreak: 'break-word' }}>
                     123 Innovation Drive, Tech Valley
                   </p>
                   <p style={{ margin: 0, color: '#888888', fontSize: '0.9rem' }}>
@@ -92,14 +92,14 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-                <i 
+              <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                <i
                   className="bi bi-telephone-fill"
-                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem' }}
+                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem', marginTop: '0.25rem', flexShrink: 0 }}
                 ></i>
-                <div>
-                  <p style={{ margin: 0, color: '#666666' }}>
-                    <strong>Phone:</strong> <span>+1 (555) 123-4567</span>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <p style={{ margin: 0, color: '#666666', wordBreak: 'break-word' }}>
+                    <strong>Phone:</strong> <span>+92 300 9221711</span>
                   </p>
                   <p style={{ margin: 0, color: '#888888', fontSize: '0.9rem' }}>
                     Mon-Fri 9AM-6PM PST
@@ -107,14 +107,14 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <i 
+              <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                <i
                   className="bi bi-envelope-fill"
-                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem' }}
+                  style={{ color: 'var(--text-accent)', marginRight: '0.75rem', fontSize: '1.1rem', marginTop: '0.25rem', flexShrink: 0 }}
                 ></i>
-                <div>
-                  <p style={{ margin: 0, color: '#666666' }}>
-                    <strong>Email:</strong> <span>hello@dewi.com</span>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <p style={{ margin: 0, color: '#666666', wordBreak: 'break-word' }}>
+                    <strong>Email:</strong> <span>info@omnifics.io</span>
                   </p>
                   <p style={{ margin: 0, color: '#888888', fontSize: '0.9rem' }}>
                     Response within 2 hours
@@ -123,7 +123,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="social-links d-flex mt-4">
+            <div className="social-links d-flex flex-wrap mt-4" style={{ gap: '0.75rem' }}>
               {[
                 { platform: 'twitter', icon: 'bi-twitter-x', url: '#' },
                 { platform: 'facebook', icon: 'bi-facebook', url: '#' },
@@ -131,7 +131,7 @@ export default function Footer() {
                 { platform: 'linkedin', icon: 'bi-linkedin', url: '#' },
                 { platform: 'youtube', icon: 'bi-youtube', url: '#' }
               ].map((social, index) => (
-                <a 
+                <a
                   key={index}
                   href={social.url}
                   style={{
@@ -144,9 +144,9 @@ export default function Footer() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textDecoration: 'none',
-                    marginRight: '0.75rem',
                     transition: 'all 0.3s ease',
-                    border: '1px solid #dee2e6'
+                    border: '1px solid #dee2e6',
+                    flexShrink: 0
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.background = '#4a90e2'
@@ -166,7 +166,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-lg-2 col-md-3 footer-links">
+          <div className="col-lg-2 col-md-3 col-6 footer-links">
             <h4
               style={{
                 color: '#f5f5f5', // heading color
@@ -242,7 +242,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="col-lg-2 col-md-3 footer-links">
+          <div className="col-lg-2 col-md-3 col-6 footer-links">
             <h4
               style={{
                 color: '#f5f5f5',
@@ -348,12 +348,14 @@ export default function Footer() {
             </p>
 
             <form onSubmit={handleNewsletterSubmit} style={{ marginBottom: '1rem' }}>
-              <div 
+              <div
                 style={{
                   display: 'flex',
                   gap: '0.5rem',
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
+                  flexDirection: 'column'
                 }}
+                className="newsletter-form-container"
               >
                 <input
                   type="email"
@@ -368,7 +370,9 @@ export default function Footer() {
                     borderRadius: '8px',
                     background: '#181c22', // dark input
                     color: '#f5f5f5',
-                    fontSize: '0.9rem'
+                    fontSize: '0.9rem',
+                    width: '100%',
+                    marginBottom: '0.5rem'
                   }}
                   required
                 />
@@ -384,7 +388,10 @@ export default function Footer() {
                     fontWeight: 600,
                     cursor: isSubscribing ? 'not-allowed' : 'pointer',
                     transition: 'all 0.3s ease',
-                    whiteSpace: 'nowrap'
+                    whiteSpace: 'nowrap',
+                    width: '100%',
+                    maxWidth: '200px',
+                    alignSelf: 'flex-start'
                   }}
                   onMouseEnter={(e) => {
                     if (!isSubscribing) {
@@ -453,38 +460,34 @@ export default function Footer() {
         }}
       >
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6 text-center text-md-start">
-              <p style={{ color: '#bdbdbd', margin: 0 }}>
+          <div className="row">
+            <div className="col-12 text-center">
+              <p style={{ color: '#bdbdbd', margin: 0, marginBottom: '1rem' }}>
                 © {currentYear} <strong style={{ color: '#4a90e2' }}>Omnifics</strong>. All Rights Reserved.
               </p>
             </div>
-            <div className="col-md-6 text-center text-md-end">
+            <div className="col-12 text-center">
               <div style={{ color: '#888', fontSize: '0.9rem' }}>
-                <span style={{ marginRight: '1rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
                   <a
                     href="#"
                     style={{ color: '#888', textDecoration: 'none' }}
                   >
                     Privacy Policy
                   </a>
-                </span>
-                <span style={{ marginRight: '1rem' }}>
                   <a
                     href="#"
                     style={{ color: '#888', textDecoration: 'none' }}
                   >
                     Terms of Service
                   </a>
-                </span>
-                <span>
                   <a
                     href="#"
                     style={{ color: '#888', textDecoration: 'none' }}
                   >
                     Cookie Policy
                   </a>
-                </span>
+                </div>
               </div>
             </div>
           </div>

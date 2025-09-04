@@ -1,4 +1,4 @@
-# Dewi - Next.js Version
+# Omnifics - Next.js Version
 
 A modern, responsive multi-purpose website template converted from HTML to Next.js with TypeScript support.
 
@@ -42,7 +42,7 @@ A modern, responsive multi-purpose website template converted from HTML to Next.
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd dewi-nextjs
+   cd omnifics-nextjs
    ```
 
 2. **Install dependencies**
@@ -72,7 +72,7 @@ npm start
 ## Project Structure
 
 ```
-dewi-nextjs/
+omnifics-nextjs/
 ├── app/                    # Next.js App Router
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
@@ -209,7 +209,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Credits
 
-- **Original Template**: [Dewi by BootstrapMade](https://bootstrapmade.com/dewi-free-multi-purpose-html-template/)
+- **Original Template**: [omnifics by BootstrapMade](https://bootstrapmade.com/omnifics-free-multi-purpose-html-template/)
 - **Icons**: [Bootstrap Icons](https://icons.getbootstrap.com/)
 - **Framework**: [Next.js](https://nextjs.org/)
 

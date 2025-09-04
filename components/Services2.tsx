@@ -229,61 +229,7 @@ export default function Services2() {
           ))}
         </div>
 
-        {/* Call to Action Section */}
-        <div className="row mt-5" data-aos="fade-up" data-aos-delay="400">
-          <div className="col-12 text-center">
-            <div 
-              style={{
-                background: 'linear-gradient(135deg, #4A90E2, #87CEEB)',
-                borderRadius: '20px',
-                padding: '3rem 2rem',
-                color: '#ffffff',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              <h3 style={{ fontSize: '2rem',  color: '#ffffff', fontWeight: 700, marginBottom: '1rem' }}>
-                Ready to Get Started?
-              </h3>
-              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9 }}>
-                Let's discuss how our services can help transform your business
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <button
-                  style={{
-                    background: '#ffffff',
-                    color: '#4A90E2',
-                    border: 'none',
-                    padding: '1rem 2rem',
-                    borderRadius: '25px',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)'
-                  }}
-                >
-                  Get Free Consultation
-                </button>
-                <button
-                  style={{
-                    background: 'transparent',
-                    color: '#ffffff',
-                    border: '2px solid #ffffff',
-                    padding: '1rem 2rem',
-                    borderRadius: '25px',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                >
-                  View Portfolio
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   )

@@ -49,7 +49,7 @@ export default function Header() {
             onMouseLeave={() => setLogoHovered(false)}
           >
             <div>
-              <Image src={logo} alt="Dewi Logo" width={150} height={30} />
+              <Image src={logo} alt="omnifics logo" width={150} height={30} />
             </div>
           </Link>
         </div>
@@ -107,12 +107,16 @@ export default function Header() {
         <div className="mobile-nav-content">
           <div className="mobile-nav-header px-3 px-md-4">
             <div className="logo">
-              <Link href="/" onClick={closeAllDropdowns} className="mobile-logo">
-                <div className="mobile-logo-icon">
-                  <div className="mobile-logo-sparkle">✨</div>
-                </div>
-                <span className="sitename">Dewi</span>
-              </Link>
+               <Link
+            href="/"
+            className="d-flex align-items-center creative-logo"
+            onMouseEnter={() => setLogoHovered(true)}
+            onMouseLeave={() => setLogoHovered(false)}
+          >
+            <div>
+              <Image src={logo} alt="omnifics logo" width={150} height={30} />
+            </div>
+          </Link>
             </div>
             <button
               className="mobile-nav-close"
