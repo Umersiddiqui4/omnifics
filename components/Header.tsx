@@ -88,6 +88,7 @@ export default function Header() {
 
 
         {/* Creative Mobile Menu Toggle */}
+        {!isMobileMenuOpen && (
         <button
           className={`mobile-nav-toggle ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={toggleMobileMenu}
@@ -99,6 +100,7 @@ export default function Header() {
             <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
           </div>
         </button>
+        )}
       </div>
 
       {/* Creative Mobile Navigation Menu */}
@@ -147,9 +149,9 @@ export default function Header() {
                     onClick={closeAllDropdowns}
                     style={{ '--link-color': item.color } as React.CSSProperties}
                   >
-                    <div className="mobile-link-icon">
-                      <i className={`bi ${item.icon}`}></i>
-                      <div className="icon-glow"></div>
+                    <div className="mobile-link-icon" >
+                      <i className={`bi ${item.icon}`} style={{color: "white !important"}}></i>
+                      <div className="icon-glow" ></div>
                     </div>
                     <span className="mobile-link-text">{item.label}</span>
                     <div className="mobile-link-arrow">

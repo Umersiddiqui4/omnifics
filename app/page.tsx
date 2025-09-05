@@ -8,12 +8,9 @@ import About from '@/components/About'
 import Services from '@/components/Services'
 import Clients from '@/components/Clients'
 import Features from '@/components/Features'
-import Services2 from '@/components/Services2'
 import Industries from '@/components/Industries'
 import Goals from '@/components/Goals'
 import Milestones from '@/components/Milestones'
-import Testimonials from '@/components/Testimonials'
-import Portfolio from '@/components/Portfolio'
 import Team from '@/components/Team'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -55,11 +52,8 @@ export default function Home() {
         <Clients />
         <Features />
         <Industries />
-        {/* <Services2 /> */}
         <Goals />
         <Milestones />
-        {/* <Testimonials /> */}
-        {/* <Portfolio /> */}
         <Team />
         <Contact />
       </main>

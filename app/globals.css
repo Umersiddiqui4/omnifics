@@ -413,9 +413,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .creative-logo:hover {
-  transform: translateY(-2px);
-  background: rgba(74, 144, 226, 0.1);
-  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.15), rgba(91, 160, 242, 0.1));
+  box-shadow: 0 12px 35px rgba(74, 144, 226, 0.3);
+  border-radius: 25px;
 }
 
 .logo-icon {
@@ -999,37 +1000,52 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-toggle {
   display: none;
   background: none;
-  border: none;
+  border: none !important;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1001;
 }
 
-.mobile-nav-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+
+
+.hamburger-container {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hamburger-line {
   display: block;
-  width: 25px;
+  width: 24px;
   height: 3px;
   background: #fff;
-  margin: 5px 0;
+  margin: 0;
   transition: all 0.3s ease;
   border-radius: 2px;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
 }
 
 .hamburger-line.active:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
+  background: #fff;
 }
 
 .hamburger-line.active:nth-child(2) {
   opacity: 0;
+  transform: scale(0);
 }
 
 .hamburger-line.active:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: #fff;
 }
 
 /* Mobile Navigation */
@@ -1233,6 +1249,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  color: #fff;
 }
 
 .decoration-circle {
@@ -2206,26 +2223,40 @@ select:focus {
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 997;
   height: 90px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 20px 20px;
+  animation: headerSlideDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes headerSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.15);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
   height: 80px;
-  border-bottom: 1px solid rgba(74, 144, 226, 0.3);
+  border-bottom: 1px solid rgba(74, 144, 226, 0.4);
+  transform: translateY(0);
 }
 
 .header.logo-hovered {
@@ -2310,11 +2341,14 @@ select:focus {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 25px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header .navmenu .nav-link::before {
@@ -2334,8 +2368,10 @@ select:focus {
 
 .header .navmenu .nav-link:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.2), rgba(91, 160, 242, 0.2));
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+  border: 1px solid rgba(74, 144, 226, 0.4);
 }
 
 /* CTA Button */
@@ -2401,27 +2437,19 @@ select:focus {
 
 /* Simple Mobile Navigation Toggle */
 .mobile-nav-toggle {
-  display: block !important; /* Force display */
-  background: transparent;
-  border: none;
+  display: block !important; 
   cursor: pointer;
   padding: 0.75rem;
-  transition: all 0.3s ease;
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   z-index: 1000;
 }
 
-.mobile-nav-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
+
 
 /* Hide hamburger when mobile menu is open */
-.mobile-nav.active ~ .container-fluid .mobile-nav-toggle {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 
 /* Ensure hamburger menu is visible on mobile */
 @media (max-width: 991px) {
@@ -2429,6 +2457,7 @@ select:focus {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
   }
 }
 
@@ -2559,6 +2588,7 @@ select:focus {
   z-index: 999;
   transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
+  will-change: right;
 }
 
 .mobile-nav.active {
@@ -2879,6 +2909,7 @@ select:focus {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  will-change: opacity, visibility;
 }
 
 .mobile-nav-overlay.active {

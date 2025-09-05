@@ -59,7 +59,12 @@ export default function Clients() {
     { id: 9, logo: '/assets/img/clients/sudo.png' },
     { id: 10, logo: '/assets/img/clients/tech.png' },
     { id: 11, logo: '/assets/img/clients/tpe.png' },
-    { id: 12, logo: '/assets/img/clients/zyrous.svg' }
+    { id: 12, logo: '/assets/img/clients/zyrous.svg' },
+    { id: 12, logo: '/assets/img/clients/sd.png' },
+    { id: 12, logo: '/assets/img/clients/gini.png' }
+
+
+
   ]
 
   return (

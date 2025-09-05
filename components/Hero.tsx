@@ -10,7 +10,7 @@ export default function Hero() {
     <section id="hero" className="hero section dark-background">
       <div className="hero-background">
         <Image 
-          src="/assets/img/hero-bg.jpg"
+          src="/assets/img/office.png"
           alt="Hero Background" 
           fill
           priority
