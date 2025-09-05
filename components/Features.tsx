@@ -13,7 +13,7 @@ export default function Features() {
       title: 'Creative Design',
       icon: 'bi-palette',
       description: 'Beautiful and intuitive designs that captivate your audience and enhance user experience.',
-      image: 'https://media.istockphoto.com/id/1446934118/photo/happy-business-man-listening-to-a-discussion-in-an-office.jpg?s=612x612&w=0&k=20&c=jiGivtsXnV0rZex5PEawRYVyNNzhkntyZDNeLXg7H0A=',
+      image: 'https://img.freepik.com/premium-photo/woman-designer-interior-working-workspace-concept_53876-48141.jpg',
       benefits: [
         'User-centered design approach',
         'Modern UI/UX principles',
@@ -30,7 +30,7 @@ export default function Features() {
       title: 'Advanced Development',
       icon: 'bi-code-slash',
       description: 'Cutting-edge development using the latest technologies to build robust and scalable solutions.',
-      image: 'https://media.istockphoto.com/id/1446934118/photo/happy-business-man-listening-to-a-discussion-in-an-office.jpg?s=612x612&w=0&k=20&c=jiGivtsXnV0rZex5PEawRYVyNNzhkntyZDNeLXg7H0A=',
+      image: 'https://media.istockphoto.com/id/1187869343/photo/developing-mobile-application.jpg?s=612x612&w=0&k=20&c=x0OkgjkD_j5AD2b70_3IST3UgSexxdGtRhB56Xk0aFg=',
       benefits: [
         'Modern tech stack',
         'Performance optimization',
@@ -47,7 +47,7 @@ export default function Features() {
       title: 'Digital Marketing',
       icon: 'bi-graph-up-arrow',
       description: 'Strategic digital marketing solutions that drive traffic, engagement, and conversions.',
-      image: 'https://media.istockphoto.com/id/1446934118/photo/happy-business-man-listening-to-a-discussion-in-an-office.jpg?s=612x612&w=0&k=20&c=jiGivtsXnV0rZex5PEawRYVyNNzhkntyZDNeLXg7H0A=',
+      image: 'https://certiprof.com/cdn/shop/articles/DIGITAL_MARKETING_BY_CERTIPROF.webp?v=1742398487',
       benefits: [
         'SEO optimization',
         'Social media strategy',
@@ -233,26 +233,7 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Additional Features Grid */}
-        <div className="features-grid" data-aos="fade-up" data-aos-delay="300">
-          <div className="row g-4">
-            {features.map((feature, index) => (
-              <div key={feature.id} className="col-lg-3 col-md-6">
-                <div className="feature-card">
-                  <div className="feature-card-icon">
-                    <i className={`bi ${feature.icon}`}></i>
-                  </div>
-                  <h5>{feature.title}</h5>
-                  <p>{feature.description}</p>
-                  <div className="feature-card-stats">
-                    <span className="stat-value">{feature.stats.value}</span>
-                    <span className="stat-label">{feature.stats.label}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </div>
     </section>
   )

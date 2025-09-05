@@ -377,60 +377,7 @@ export default function Team() {
           ))}
         </div>
 
-        {/* Team Culture Section */}
-        <div className="row mt-5" data-aos="fade-up" data-aos-delay="400">
-          <div className="col-12 text-center">
-            <div 
-              style={{
-                background: 'linear-gradient(135deg, #4A90E2, #87CEEB)',
-                borderRadius: '25px',
-                padding: '3rem 2rem',
-                color: '#ffffff',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              <h3 style={{ fontSize: '2rem', color: "white", fontWeight: 700, marginBottom: '1rem' }}>
-                Join Our Growing Team
-              </h3>
-              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9 }}>
-                We're always looking for talented individuals who share our passion for innovation and excellence
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <button
-                  style={{
-                    background: '#ffffff',
-                    color: '#4A90E2',
-                    border: 'none',
-                    padding: '1rem 2rem',
-                    borderRadius: '25px',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                >
-                  View Open Positions
-                </button>
-                <button
-                  style={{
-                    background: 'transparent',
-                    color: '#ffffff',
-                    border: '2px solid #ffffff',
-                    padding: '1rem 2rem',
-                    borderRadius: '25px',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                >
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <style jsx>{`

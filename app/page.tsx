@@ -9,6 +9,9 @@ import Services from '@/components/Services'
 import Clients from '@/components/Clients'
 import Features from '@/components/Features'
 import Services2 from '@/components/Services2'
+import Industries from '@/components/Industries'
+import Goals from '@/components/Goals'
+import Milestones from '@/components/Milestones'
 import Testimonials from '@/components/Testimonials'
 import Portfolio from '@/components/Portfolio'
 import Team from '@/components/Team'
@@ -51,7 +54,10 @@ export default function Home() {
         <Services />
         <Clients />
         <Features />
-        <Services2 />
+        <Industries />
+        {/* <Services2 /> */}
+        <Goals />
+        <Milestones />
         {/* <Testimonials /> */}
         {/* <Portfolio /> */}
         <Team />

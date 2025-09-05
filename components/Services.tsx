@@ -10,69 +10,36 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      icon: 'bi-laptop',
-      title: 'Web Development',
-      description: 'Custom websites and web applications built with modern technologies and best practices.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center',
+      icon: 'bi-phone-fill',
+      title: 'Frontend & Mobile Development',
+      description: 'Modern web and mobile applications built with cutting-edge frameworks for exceptional user experiences.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=center',
       fallbackImage: '/assets/img/services-1.jpg',
-      features: ['Responsive Design', 'SEO Optimized', 'Fast Performance', 'Modern Technologies'],
+      features: ['React', 'Angular', 'Vue', 'Flutter', 'React Native'],
       link: '#portfolio',
       color: '#4A90E2'
     },
     {
       id: 2,
-      icon: 'bi-phone',
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile applications for iOS and Android devices.',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop&crop=center',
+      icon: 'bi-server',
+      title: 'Backend & Database Solutions',
+      description: 'Robust backend systems and database architectures designed for performance, security, and scalability.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop&crop=center',
       fallbackImage: '/assets/img/services-2.jpg',
-      features: ['iOS & Android', 'Cross Platform', 'Native Performance', 'User Experience'],
-      link: '#portfolio',
-      color: '#5BA0F2'
+      features: ['Node.js', 'Java', '.NET', 'Python', 'PostgreSQL', 'MongoDB'],
+      link: '#contact',
+      color: '#50C878'
     },
     {
       id: 3,
-      icon: 'bi-palette',
-      title: 'UI/UX Design',
-      description: 'Beautiful and intuitive user interfaces that enhance user experience and engagement.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop&crop=center',
-      fallbackImage: '/assets/img/services-3.jpg',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design'],
-      link: '#portfolio',
-      color: '#5BA0F2'
-    },
-    {
-      id: 4,
-      icon: 'bi-graph-up',
-      title: 'Digital Marketing',
-      description: 'Strategic digital marketing solutions to grow your online presence and reach.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center',
-      fallbackImage: '/assets/img/services-4.jpg',
-      features: ['SEO & SEM', 'Social Media', 'Content Strategy', 'Analytics'],
-      link: '#portfolio',
-      color: '#4A90E2'
-    },
-    {
-      id: 5,
-      icon: 'bi-gear',
-      title: 'Technical Support',
-      description: 'Ongoing technical support and maintenance to keep your digital solutions running smoothly.',
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop&crop=center',
-      fallbackImage: '/assets/img/services-5.jpg',
-      features: ['24/7 Support', 'Regular Updates', 'Performance Monitoring', 'Security'],
-      link: '#contact',
-      color: '#4A90E2'
-    },
-    {
-      id: 6,
       icon: 'bi-cloud',
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop&crop=center',
-      fallbackImage: '/assets/img/services-6.jpg',
-      features: ['AWS/Azure', 'Scalability', 'Security', 'Cost Optimization'],
+      title: 'Cloud & DevOps Services',
+      description: 'Complete cloud infrastructure and DevOps solutions for modern application deployment and management.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop&crop=center',
+      fallbackImage: '/assets/img/services-3.jpg',
+      features: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'CI/CD', 'GCP'],
       link: '#contact',
-      color: '#5BA0F2'
+      color: '#F39C12'
     }
   ]
 
@@ -80,15 +47,15 @@ export default function Services() {
     <section id="services" className="services section light-background">
       <div className="container">
         <div className="section-title" data-aos="fade-up">
-          <h2>Our Services</h2>
-          <p>Comprehensive digital solutions to help your business grow and succeed</p>
+          <h2>Our Offered Services</h2>
+          <p>Professional solutions tailored to meet your business needs and drive success</p>
         </div>
 
         <div className="row g-4">
           {services.map((service, index) => (
-            <div 
-              key={service.id} 
-              className="col-lg-4 col-md-6"
+            <div
+              key={service.id}
+              className="col-lg-4 col-md-6 d-flex justify-content-center"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -251,15 +218,14 @@ export default function Services() {
                       {service.description}
                     </p>
                     
-                    {/* Features - Fixed height */}
-                    <div 
+                    {/* Features - Dynamic height */}
+                    <div
                       className="service-features"
                       style={{
-                        marginBottom: '1.5rem',
-                        minHeight: '3rem' // Fixed height for features
+                        marginBottom: '1.5rem'
                       }}
                     >
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <span 
                           key={featureIndex} 
                           className="feature-tag"
@@ -334,64 +300,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Enhanced CTA Section */}
-        <div className="services-cta text-center mt-5" data-aos="fade-up" data-aos-delay="600">
-          <div 
-            style={{
-              background: 'linear-gradient(135deg, #4A90E2, #87CEEB)',
-              borderRadius: '25px',
-              padding: '3rem 2rem',
-              color: '#ffffff',
-              position: 'relative',
-              overflow: 'hidden'
-            }}
-          >
-            <h3 style={{ fontSize: '2rem', color:"white", fontWeight: 700, marginBottom: '1rem' }}>
-              Ready to Transform Your Business?
-            </h3>
-            <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: 0.9 }}>
-              Let's discuss how our services can help you achieve your digital goals
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link 
-                href="#contact" 
-                className="btn-cta"
-                style={{
-                  background: '#ffffff',
-                  color: '#4A90E2',
-                  padding: '1rem 2rem',
-                  borderRadius: '25px',
-                  textDecoration: 'none',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  transition: 'all 0.3s ease',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}
-              >
-                <span>Start Your Project</span>
-                <i className="bi bi-rocket"></i>
-              </Link>
-              <Link 
-                href="#portfolio" 
-                style={{
-                  background: 'transparent',
-                  color: '#ffffff',
-                  border: '2px solid #ffffff',
-                  padding: '1rem 2rem',
-                  borderRadius: '25px',
-                  textDecoration: 'none',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                View Our Work
-              </Link>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   )

@@ -195,21 +195,7 @@ export default function Clients() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="text-center mt-4">
-          <div 
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: '#666',
-              fontSize: '0.9rem'
-            }}
-          >
-            <i className="bi bi-arrow-left-right"></i>
-            <span>Scroll to see more clients</span>
-          </div>
-        </div>
+       
       </div>
     </section>
   )
